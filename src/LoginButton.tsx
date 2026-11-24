@@ -1,8 +1,9 @@
-function LoginButton() {
+import Button from "react-bootstrap/Button"
 
+function LoginButton() {
   return (
     <>
-      <button onClick={() => console.log("hello")}>Login</button>
+      <Button onClick={() => console.log("hello")}>Login</Button>
     </>
   )
 }

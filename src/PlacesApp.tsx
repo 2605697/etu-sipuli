@@ -3,12 +3,11 @@ import Map from "./Map"
 
 
 function PlacesApp() {
-
   return (
-    <>
+    <div className="position-relative">
       <Map />
       <Sidebar />
-    </>
+    </div>
   )
 }
 
