@@ -1,5 +1,5 @@
-import Sidebar from "./Sidebar.tsx"
-import Map from "./Map"
+import Sidebar from "../components/Sidebar"
+import Map from "../components/Map"
 
 
 function PlacesApp() {
