@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 import Offcanvas from "react-bootstrap/Offcanvas"
 import LoginButton from "./LoginButton"
-import { usePlaces } from "./usePlaces"
+import { usePlaces } from "../context/usePlaces"
 
 function Sidebar() {
   const { places, selectedPlace, selectPlace } = usePlaces()

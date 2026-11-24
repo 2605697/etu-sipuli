@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
-import { usePlaces } from "./usePlaces"
+import { usePlaces } from "../context/usePlaces"
 
 function Map() {
   const context = usePlaces()

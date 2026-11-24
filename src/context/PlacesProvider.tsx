@@ -1,6 +1,6 @@
 import { useState, type PropsWithChildren } from "react"
 import { PlaceContext } from "./PlaceContext"
-import type { Place, PlaceFilters } from "./types"
+import type { Place, PlaceFilters } from "../types"
 
 async function fetchPlaces(filters: PlaceFilters | null = null): Promise<Place[]> {
   const data = await (await fetch(import.meta.env.VITE_SERVER_URL + "/api/places")).json()
