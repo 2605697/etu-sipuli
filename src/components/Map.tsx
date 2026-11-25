@@ -3,7 +3,7 @@ import "leaflet/dist/leaflet.css"
 import { usePlaces } from "../context/usePlaces"
 
 function Map() {
-  const context = usePlaces()
+  const { places } = usePlaces()
 
   return (
     <>
@@ -12,7 +12,7 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {context.places.map(p => <Marker key={p.ID} position={[p.Latitude, p.Longitude]}><Popup>{p.Name}</Popup></Marker>)}
+        {places.map(p => <Marker key={p.ID} position={[p.Latitude, p.Longitude]}><Popup>{p.Name}</Popup></Marker>)}
       </MapContainer>
     </>
   )
