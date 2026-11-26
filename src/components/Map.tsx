@@ -1,5 +1,10 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
+import "react-leaflet-cluster/dist/assets/MarkerCluster.css"
+import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css"
+
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
+import MarkerClusterGroup from "react-leaflet-cluster"
+
 import { usePlaces } from "../context/usePlaces"
 
 function Map() {
@@ -12,7 +17,8 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {places.map(p => <Marker key={p.ID} position={[p.Latitude, p.Longitude]}><Popup>{p.Name}</Popup></Marker>)}
+        <MarkerClusterGroup chunkedLoading>
+          {places.map(p => <Marker key={p.ID} position={[p.Latitude, p.Longitude]}><Popup>{p.Name}</Popup></Marker>)}</MarkerClusterGroup>
       </MapContainer>
     </>
   )

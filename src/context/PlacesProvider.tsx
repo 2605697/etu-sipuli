@@ -1,6 +1,7 @@
-import { useState, type PropsWithChildren } from "react"
-import { PlaceContext } from "./PlaceContext"
+import { type PropsWithChildren,useState } from "react"
+
 import type { Place, PlaceFilters } from "../types"
+import { PlaceContext } from "./PlaceContext"
 
 const fetchPlaces = async (filters: PlaceFilters | null = null): Promise<Place[]> => {
   if (filters) { console.log("implement filters") }

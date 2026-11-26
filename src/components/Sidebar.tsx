@@ -1,9 +1,10 @@
 import { useState } from "react"
 import Button from "react-bootstrap/Button"
-import Table from "react-bootstrap/Table"
 import Offcanvas from "react-bootstrap/Offcanvas"
-import LoginButton from "./LoginButton"
+import Table from "react-bootstrap/Table"
+
 import { usePlaces } from "../context/usePlaces"
+import LoginButton from "./LoginButton"
 
 function Sidebar() {
   const { places, selectedPlace, selectPlace } = usePlaces()
